@@ -1,0 +1,41 @@
+mysql:
+  image: mysql:5.6
+  environment:
+    MYSQL_ROOT_PASSWORD: fedora
+    MYSQL_USER: fedora
+    MYSQL_PASSWORD: fedora
+    MYSQL_DATABASE: fedora3
+  expose:
+   - "3306"
+fedorasolrgsearch:
+  image: unblibraries/fedora-solr-gsearch:3.8.x
+  links:
+    - mysql:mysql
+  expose:
+   - "8080"
+  ports:
+    - "8080:8080"
+  environment:
+    DRUPAL_DB_NAME: islanddev_db
+    DRUPAL_DB_USER: islanddev_user
+    DRUPAL_DB_PASSWORD: fedora
+drupal:
+  build: drupal
+  links:
+    - mysql:mysql
+    - fedorasolrgsearch:fedorasolrgsearch
+    - djatoka:djatoka
+  expose:
+   - "80"
+  ports:
+    - "80:80"
+  environment:
+    MYSQL_ROOT_PASSWORD: fedora
+    DRUPAL_DB_PASSWORD: fedora
+    ISLANDORA_VERSION: 7.x-1.5
+  volumes:
+    - /home/docker/data:/data
+djatoka:
+  image: lyrasis/freelib-djatoka
+  expose:
+    - "8888"

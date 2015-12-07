@@ -1,0 +1,11 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the islanddev profile.
+ */
+function islanddev_install() {
+  include_once DRUPAL_ROOT . '/profiles/standard/standard.install';
+  standard_install();
+
+  variable_set('imagemagick_convert', '/usr/bin/convert');
+}
