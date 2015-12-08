@@ -39,3 +39,5 @@ djatoka:
   image: lyrasis/freelib-djatoka
   expose:
     - "8888"
+  ports:
+    - "8888:8888"

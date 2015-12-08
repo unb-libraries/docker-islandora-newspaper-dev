@@ -4,13 +4,14 @@ MAINTAINER Jacob Sanford <jsanford_at_unb.ca>
 ENV DRUPAL_SITE_ID islanddev
 ENV ISLANDORA_REVISION HEAD
 ENV ISLANDORA_REVISION_TYPE refspec
+ENV DJATOKA_IP 192.168.2.22
 
 # Islandora modules to enable on build.
-ENV ISLANDORA_MODULES="islandora islandora_basic_collection islandora_basic_image islandora_pdf islandora_solr islandora_pdfjs xml_forms islandora_paged_content islandora_newspaper islandora_newspaper_batch islandora_large_image islandora_ocr islandora_openseadragon"
+ENV ISLANDORA_MODULES="islandora islandora_basic_collection islandora_basic_image islandora_pdf islandora_solr islandora_pdfjs xml_forms islandora_paged_content islandora_newspaper islandora_newspaper_batch islandora_large_image islandora_ocr islandora_openseadragon islandora_internet_archive_bookreader"
 
 # Install OS packages and required libraries for solution packs.
 RUN apt-get update && \
-  DEBIAN_FRONTEND=noninteractive apt-get install -y php5-xsl dnsutils imagemagick poppler-utils ghostscript unzip && \
+ DEBIAN_FRONTEND=noninteractive apt-get install -y php5-xsl dnsutils imagemagick poppler-utils ghostscript unzip tesseract-ocr && \
   apt-get clean
 
 # Copy the makefile and install profile for building.

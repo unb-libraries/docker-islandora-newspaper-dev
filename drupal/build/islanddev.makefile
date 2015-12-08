@@ -3,10 +3,11 @@ api = 2
 projects[drupal][version] = "7.41"
 
 ; Contrib Modules
-projects[views][version] = "3.13"
+projects[colorbox][version] = "2.10"
 projects[ctools][version] = "1.9"
 projects[imagemagick][version] = "1.0"
 projects[libraries][version] = "2.2"
+projects[views][version] = "3.13"
 
 ; Islandora Modules
 projects[islandora][type] = "module"
@@ -88,6 +89,11 @@ projects[islandora_openseadragon][download][type] = "git"
 projects[islandora_openseadragon][download][url] = "git://github.com/Islandora/islandora_openseadragon.git"
 projects[islandora_openseadragon][download][ISLANDORA_REVISION_TYPE] = "ISLANDORA_REVISION"
 
+projects[islandora_internet_archive_bookreader][type] = "module"
+projects[islandora_internet_archive_bookreader][download][type] = "git"
+projects[islandora_internet_archive_bookreader][download][url] = "git://github.com/Islandora/islandora_internet_archive_bookreader.git"
+projects[islandora_internet_archive_bookreader][download][ISLANDORA_REVISION_TYPE] = "ISLANDORA_REVISION"
+
 projects[php_lib][type] = "module"
 projects[php_lib][download][type] = "git"
 projects[php_lib][download][url] = "git://github.com/Islandora/php_lib.git"
@@ -110,3 +116,16 @@ libraries[openseadragon][download][type] = "file"
 libraries[openseadragon][download][url] = "http://openseadragon.github.io/releases/openseadragon-bin-0.9.129.zip"
 libraries[openseadragon][directory_name] = "openseadragon"
 libraries[openseadragon][type] = "library"
+
+libraries[bookreader][download][type] = "git"
+libraries[bookreader][download][url] = "git://github.com/Islandora/internet_archive_bookreader.git"
+libraries[bookreader][directory_name] = "bookreader"
+libraries[bookreader][download][branch] = "master"
+libraries[bookreader][type] = "library"
+
+libraries[colorbox][download][type] = "git"
+libraries[colorbox][download][url] = "git://github.com/jackmoore/colorbox.git"
+libraries[colorbox][download][branch] = "1.x"
+libraries[colorbox][directory_name] = "colorbox"
+libraries[colorbox][type] = "library"
+
