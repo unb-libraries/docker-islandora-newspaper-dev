@@ -77,7 +77,7 @@ projects[islandora_solution_pack_newspaper][download][ISLANDORA_REVISION_TYPE] =
 
 projects[islandora_newspaper_batch][type] = "module"
 projects[islandora_newspaper_batch][download][type] = "git"
-projects[islandora_newspaper_batch][download][url] = "git://github.com/Islandora/islandora_newspaper_batch.git"
+projects[islandora_newspaper_batch][download][url] = "git://github.com/unb-libraries/islandora_newspaper_batch.git"
 
 projects[islandora_paged_content][type] = "module"
 projects[islandora_paged_content][download][type] = "git"
