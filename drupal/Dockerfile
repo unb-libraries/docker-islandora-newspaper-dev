@@ -36,6 +36,9 @@ WORKDIR /tmp
 RUN mkdir kakadu && cd kakadu && curl -O http://kakadusoftware.com/wp-content/uploads/2014/06/KDU77_Demo_Apps_for_Linux-x86-64_150710.zip && unzip KDU77_Demo_Apps_for_Linux-x86-64_150710.zip && cd KDU77_Demo_Apps_for_Linux-x86-64_150710 && mv * /usr/local/bin
 ENV LD_LIBRARY_PATH /usr/local/bin
 
+# SQL queries to enable search fields
+ADD data/islandora_search_settings.sql.txt /tmp/islandora_search_settings.sql.txt
+
 # Phusion/baseimage inits.
 CMD ["/sbin/my_init"]
 ADD init/ /etc/my_init.d/
