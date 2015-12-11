@@ -50,6 +50,11 @@ projects[islandora_solr_search][download][type] = "git"
 projects[islandora_solr_search][download][url] = "git://github.com/Islandora/islandora_solr_search.git"
 projects[islandora_solr_search][download][ISLANDORA_REVISION_TYPE] = "ISLANDORA_REVISION"
 
+projects[islandora_solr_views][type] = "module"
+projects[islandora_solr_views][download][type] = "git"
+projects[islandora_solr_views][download][url] = "git://github.com/Islandora/islandora_solr_views.git"
+projects[islandora_solr_views][download][ISLANDORA_REVISION_TYPE] = "ISLANDORA_REVISION"
+
 projects[objective_forms][type] = "module"
 projects[objective_forms][download][type] = "git"
 projects[objective_forms][download][url] = "git://github.com/Islandora/objective_forms.git"
@@ -98,6 +103,16 @@ projects[php_lib][type] = "module"
 projects[php_lib][download][type] = "git"
 projects[php_lib][download][url] = "git://github.com/Islandora/php_lib.git"
 projects[php_lib][download][ISLANDORA_REVISION_TYPE] = "ISLANDORA_REVISION"
+
+: Themes
+projects[open_framework][type] = theme
+projects[open_framework][download][type] = git
+projects[open_framework][download][branch] = 7.x-2.x
+projects[open_framework][download][url] = git://github.com/SU-SWS/open_framework.git
+projects[stanford_light][type] = theme
+projects[stanford_light][download][type] = git
+projects[stanford_light][download][branch] = master
+projects[stanford_light][download][url] = git://github.com/SU-SWS/stanford_light.git
 
 ; Libraries
 libraries[tuque][download][type] = "git"

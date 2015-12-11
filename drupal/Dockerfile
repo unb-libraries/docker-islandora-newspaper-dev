@@ -7,7 +7,7 @@ ENV ISLANDORA_REVISION_TYPE refspec
 ENV DJATOKA_IP 192.168.2.22
 
 # Islandora modules to enable on build.
-ENV ISLANDORA_MODULES="islandora islandora_basic_collection islandora_basic_image islandora_pdf islandora_solr islandora_pdfjs xml_forms islandora_paged_content islandora_newspaper islandora_newspaper_batch islandora_large_image islandora_ocr islandora_openseadragon islandora_internet_archive_bookreader"
+ENV ISLANDORA_MODULES="islandora islandora_basic_collection islandora_basic_image islandora_pdf islandora_solr islandora_pdfjs xml_forms islandora_paged_content islandora_newspaper islandora_newspaper_batch islandora_large_image islandora_ocr islandora_openseadragon islandora_internet_archive_bookreader islandora_solr_config islandora_solr_views"
 
 # Install OS packages and required libraries for solution packs.
 RUN apt-get update && \
