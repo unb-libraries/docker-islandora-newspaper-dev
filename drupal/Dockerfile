@@ -4,7 +4,7 @@ MAINTAINER Jacob Sanford <jsanford_at_unb.ca>
 ENV DRUPAL_SITE_ID islanddev
 ENV ISLANDORA_REVISION HEAD
 ENV ISLANDORA_REVISION_TYPE refspec
-ENV DJATOKA_IP 192.168.2.22
+ENV DJATOKA_IP 131.202.35.32
 
 # Islandora modules to enable on build.
 ENV ISLANDORA_MODULES="islandora islandora_basic_collection islandora_basic_image islandora_pdf islandora_solr islandora_pdfjs xml_forms islandora_paged_content islandora_newspaper islandora_newspaper_batch islandora_large_image islandora_ocr islandora_openseadragon islandora_internet_archive_bookreader islandora_solr_config islandora_solr_views"

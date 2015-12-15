@@ -34,7 +34,7 @@ drupal:
     DRUPAL_DB_PASSWORD: fedora
     ISLANDORA_VERSION: 7.x-1.5
   volumes:
-    - /home/docker/NBNDP:/data
+    - /mnt/sda1/docker-data:/data
 djatoka:
   image: lyrasis/freelib-djatoka
   expose:
